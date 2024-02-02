@@ -31,3 +31,7 @@ Mise en place du projet :
   - docker exec -it cours-api-1 sh
   - Lancer les scripts python dans l'ordre : init.py puis create.py
 - Le projet est lancé
+
+Ajout dans le code :
+- Ajout dans app.py de la nouvelle root pour ensuite l'appeler dans attractions.py de la fonction get_all_attraction_visible() pour ensuite l'utiliser dans public getAllAttractionVisible() et l'afficher dans le accueil.components.ts
+- 
