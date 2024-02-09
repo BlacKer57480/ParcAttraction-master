@@ -1,0 +1,21 @@
+<h2>Ajouter une critique</h2>
+<ng-container [formGroup]="formulaireCritique">
+    <!-- Champs du formulaire, par exemple : -->
+    <mat-form-field appearance="fill">
+      <mat-label>Nom</mat-label>
+      <input matInput formControlName="nom" name="nom">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Prenom</mat-label>
+      <input matInput formControlName="prenom" name="prenom">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Note</mat-label>
+      <input matInput formControlName="note" name="note" type="number">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Commentaire</mat-label>
+      <textarea matInput formControlName="commentaire" name="commentaire"></textarea>
+    </mat-form-field>
+    <button mat-button (click)="submitCritique(formulaireCritique)" type="submit">Soumettre</button>
+</ng-container>

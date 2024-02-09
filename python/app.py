@@ -37,6 +37,23 @@ def getAllAttractionVisible():
     result = attraction.get_all_attraction_visible()
     return result, 200
 
+#route pour mettre une critique en fonction de son id
+@app.post('/attraction/<int:index>/critique')
+def addCritique(index):
+    print("okok", flush=True)
+    json = request.get_json()
+    retour = attraction.add_critique(index, json)
+    if (retour):
+        return jsonify({"message": "Critique ajoutée.", "result": retour}), 200
+    return jsonify({"message": "Erreur lors de l'ajout.", "result": retour}), 500
+
+#route pour récuperer une critique en fonction de son id
+@app.get('/attraction/<int:index>/critique')
+def getAttractionCritique(index):
+    result = attraction.get_attraction_critique(index)
+    return result, 200
+
+
 @app.get('/attraction/<int:index>')
 def getAttraction(index):
     result = attraction.get_attraction(index)

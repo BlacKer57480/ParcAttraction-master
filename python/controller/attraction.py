@@ -28,6 +28,21 @@ def get_all_attraction():
     json = req.select_from_db("SELECT * FROM attraction")
     
     return json
+  
+def add_critique(id, data):
+    if (not id):
+        return False
+
+    if (not "note" in data or data["note"] is None):
+        return False
+
+    if (not "commentaire" in data or data["commentaire"] == ""):
+        return False
+
+    requete = "INSERT INTO critique (nom, prenom, note, commentaire, attraction_id) VALUES (?, ?, ?, ?, ?);"
+    req.insert_in_db(requete, (data["nom"], data["prenom"], data["note"], data["commentaire"], id))
+
+    return True
 
 def get_all_attraction_visible():
     json = req.select_from_db("SELECT * FROM attraction WHERE visible = true")
