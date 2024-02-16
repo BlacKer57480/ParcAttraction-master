@@ -13,7 +13,7 @@
     </div>
     <ng-container *ngFor="let attraction of attractions | async;">
       <div class="attraction">
-        <span>{{attraction.nom}}</span>
+       <span> <a routerLink="/critique/{{attraction.attraction_id}}" >{{attraction.nom}}</a></span>
         <span>{{attraction.description}}</span>
         <span>{{attraction.difficulte}} / 5</span>
         <button (click)="afficherCritique(attraction)">Ajouter une critique</button>

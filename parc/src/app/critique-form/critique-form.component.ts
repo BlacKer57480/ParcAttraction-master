@@ -30,7 +30,7 @@ export class CritiqueFormComponent {
       prenom: new FormControl(""),
       attraction_id: new FormControl(data.attraction_id),
       note: new FormControl("", [Validators.required]),
-      commentaire: new FormControl("", [Validators.required]),
+      commentaire: new FormControl("", [Validators.required, Validators.maxLength(3000)]),
     });
 
   }

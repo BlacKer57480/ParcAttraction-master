@@ -38,11 +38,22 @@ def add_critique(id, data):
 
     if (not "commentaire" in data or data["commentaire"] == ""):
         return False
+    
+    if ("commentaire" in data and len(data["commentaire"]) > 3000):
+        return False
 
     requete = "INSERT INTO critique (nom, prenom, note, commentaire, attraction_id) VALUES (?, ?, ?, ?, ?);"
     req.insert_in_db(requete, (data["nom"], data["prenom"], data["note"], data["commentaire"], id))
 
     return True
+  
+def get_attraction_critique(id):
+    if (not id):
+        return False
+
+    json = req.select_from_db("SELECT * FROM critique WHERE attraction_id = ?", (id,))
+
+    return json
 
 def get_all_attraction_visible():
     json = req.select_from_db("SELECT * FROM attraction WHERE visible = true")

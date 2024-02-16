@@ -1,4 +1,6 @@
+DROP TABLE IF EXISTS critique;
 DROP TABLE IF EXISTS attraction;
+
 
 CREATE TABLE attraction (
     attraction_id int auto_increment,
@@ -18,7 +20,6 @@ CREATE TABLE users (
     password varchar(255) not null
 );
 
-DROP TABLE IF EXISTS critique;
 
 CREATE TABLE critique (
     critique_id int auto_increment,
@@ -26,7 +27,7 @@ CREATE TABLE critique (
     nom varchar(255),
     prenom varchar(255),
     note int not null,
-    commentaire varchar(255) not null,
+    commentaire text not null,
     attraction_id int,
     foreign key(attraction_id) references attraction(attraction_id)
 );

@@ -7,12 +7,13 @@ import { MatCardModule } from '@angular/material/card';
 import { map } from 'rxjs/operators';
 import { CritiqueFormComponent } from '../critique-form/critique-form.component';
 import {MatDialog} from '@angular/material/dialog';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-accueil',
   standalone: true,
-  imports: [CommonModule, MatCardModule],
+  imports: [CommonModule, MatCardModule, RouterLink],
   templateUrl: './accueil.component.html',
   styleUrl: './accueil.component.scss'
 })
