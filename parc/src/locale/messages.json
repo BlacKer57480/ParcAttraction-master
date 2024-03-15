@@ -1,0 +1,22 @@
+{
+  "locale": "fr",
+  "translations": {
+    "3416485823535414220": "Nom de l'attraction",
+    "7287191990850185862": "Description de l'attraction",
+    "1102715820658871489": "Difficulté de l'attraction / 5",
+    "1675613483934664638": "Critique",
+    "1533381317247356206": "Ajouter une critique",
+    "6187391662882677657": "Parc d'attraction",
+    "6446192435648820310": "Déconnexion",
+    "5363451304863092478": "Nom",
+    "3942107207784466817": "Prenom",
+    "4388879716045736175": "Note",
+    "4952719776065687721": "Commentaire",
+    "6255671880111620823": "Soumettre",
+    "6269632577051190137": "List des critiques",
+    "5529117946910889097": "Note: {$INTERPOLATION}",
+    "3643846469511946013": "Commentaire: {$INTERPOLATION}",
+    "5249891717669571568": "Mot de passe",
+    "6103118278620987967": "Connexion"
+  }
+}

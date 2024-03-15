@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>List des critiques</h1>
+  <h1 i18n>List des critiques</h1>
   <ul class="critique-list">
     <li *ngFor="let critique of critiques" class="critique-item">
       <h2 class="critique-name">{{ (critique.nom && critique.prenom) ? (critique.nom + ' ' + critique.prenom) : 'Anonyme' }}</h2>
-      <p class="critique-rating">Note: {{ critique.note }}</p>
-      <p class="critique-comment">Commentaire: {{ critique.commentaire }}</p>
+      <p class="critique-rating" i18n>Note: {{ critique.note }}</p>
+      <p class="critique-comment" i18n>Commentaire: {{ critique.commentaire }}</p>
     </li>
   </ul>
 </div>

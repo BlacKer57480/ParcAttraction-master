@@ -3,6 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+
     "parc": {
       "projectType": "application",
       "schematics": {
@@ -11,6 +12,14 @@
         }
       },
       "root": "",
+      "i18n": {
+        "sourceLocale": "fr",
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.json"
+          }
+        }
+      },
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
@@ -36,6 +45,9 @@
             "scripts": []
           },
           "configurations": {
+            "en": {
+              "localize": ["en"]
+            },
             "production": {
               "budgets": [
                 {
@@ -62,6 +74,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            "en": {
+              "buildTarget": "parc:build:en"
+            },
             "production": {
               "buildTarget": "parc:build:production"
             },

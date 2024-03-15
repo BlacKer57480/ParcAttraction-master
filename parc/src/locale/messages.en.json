@@ -1,0 +1,22 @@
+{
+  "locale": "en",
+  "translations": {
+    "3416485823535414220": "Attraction name",
+    "7287191990850185862": "Description of the attraction",
+    "1102715820658871489": "Difficulty of attraction / 5",
+    "1675613483934664638": "Review",
+    "1533381317247356206": "Add a review",
+    "6187391662882677657": "Amusement park",
+    "6446192435648820310": "LogOut",
+    "5363451304863092478": "Last Name",
+    "3942107207784466817": "First Name",
+    "4388879716045736175": "Note",
+    "4952719776065687721": "Comment",
+    "6255671880111620823": "Submit",
+    "6269632577051190137": "List of reviews",
+    "5529117946910889097": "Note: {$INTERPOLATION}",
+    "3643846469511946013": "Comment: {$INTERPOLATION}",
+    "5249891717669571568": "Password",
+    "6103118278620987967": "LogIn"
+  }
+}
